@@ -884,19 +884,19 @@ Answer: Priority levels can be set to determine which sources are authoritative 
 
 - # Question/Answer Pair 67
 
-Question: In RadiantOne v8.1, what is the cn=staging naming context used for?
+Question: In RadiantOne Identity Data Management v8.1, what is the cn=staging naming context used for?
 
 Answer: CN=staging is the location where auto-generated views used for joins are mounted. Cache refresh configuration for secondary views auto-created from joins, must be managed from the cn=staging naming context > CACHE tab​.
 
 - # Question/Answer Pair 68
 
-Question: In RadiantOne v8.1, how do you configure joins in virtual identity views?
+Question: In RadiantOne Identity Data Management v8.1, how do you configure joins in virtual identity views?
 
 Answer: On the OBJECT BUILDER tab for the selected naming context, use the ADD COMPONENT menu to add objects. Then use the ADD COMPONENT menu to add a join configuration to the canvas. The join configuration dictates the attributes from the primary and secondary objects to based on the join on.
 
 - # Question/Answer Pair 69
 
-Question: In RadiantOne v8.1, what is the DYNAMIC GROUPS configuration on the SPECIAL ATTRIBUTES HANDLING tab used for?
+Question: In RadiantOne Identity Data Management v8.1, what is the DYNAMIC GROUPS configuration on the SPECIAL ATTRIBUTES HANDLING tab used for?
 
 Answer: Dictating that RadiantOne should evaluate the dynamic group membership automatically and return the explicit members as part of the member multi-valued attribute.
 
@@ -917,3 +917,65 @@ Answer: A Constant value, the result of a Function, or based on the value of an 
 Question: What should a RadiantOne administrator know when configuring joins in a virtual identity view?
 
 Answer: The objects to be joined must have a single attribute value in common. Objects from the same data source can be joined. Join processing can be slow unless the final identity view is stored in persistent cache.
+
+- # Question/Answer Pair 73
+
+Question: What information do I need before creating a virtual identity view?
+
+Answer: A data source configured for each identity data store. A schema file associated with each data source configured for the identity data. Knowledge of what kind of identity view the consumer application is expecting.
+
+- # Question/Answer Pair 74
+
+Question: What is the first step to create a virtual identity view in the Directory Namespace?
+
+Answer: Creating a new root naming context.
+
+- # Question/Answer Pair 75
+
+Question: In RadiantOne Identity Data v8.1, from where in the Control Panel do you define the attributes that will comprise the final entries in a virtual identity view?
+
+Answer: Control Panel > Setup > Directory Namespace > Namespace Design > [selected naming context] > Object Builder.
+
+- # Question/Answer Pair 76
+
+Question: In RadiantOne Identity Data Management v8.1, from where in the Control Panel do you define interception scripts in a virtual identity view?
+
+Answer: Control Panel > Setup > Directory Namespace > Namespace Design > [selected naming context] > Advanced Settings
+
+- # Question/Answer Pair 77
+
+Question: What is a MERGE BACKEND configuration used for?
+
+Answer: A merged backend can be used to mount a secondary LDAP directory hierarchy so that it can be navigated as an extension of the primary directory tree.
+
+
+
+- # Question/Answer Pair 78
+
+Question: What is the definition of a LABEL in a virtual identity view?
+
+Answer: A type of node to use for organizing an identity view that doesn't need to be associated with an object from a data source.
+
+- # Question/Answer Pair 79
+
+Question: In RadiantOne Identity Data Management v8.1, where do you remap object classes in a virtual identity view?
+
+Answer: Control Panel > Setup > Directory Namespace > Namespace Design > [selected naming context] > Advanced Settings.
+
+- # Question/Answer Pair 80
+
+Question: In RadiantOne Identity Data Management v8.1, what should you do if you want the PHONE attribute returned from a database backend as telephoneNumber in a virtual identity view?
+
+Answer: Define attribute mapping in Control Panel > Setup > Directory Namespace > Namespace Design > [selected naming context] > Object Builder.
+
+- # Question/Answer Pair 81
+
+Question: In RadiantOne Identity Data Management v8.1, what type of backends can be mounted below a label level in an identity view?
+
+Answer: Relational Database backends, RadiantOne Directory stores, or LDAP directory backends.
+
+- # Question/Answer Pair 82
+
+Question: In Identity Data Management v8.1, once a RadiantOne Directory store is mounted directly at a root naming context, can other data source be mounted below?
+
+Answer: No. Once a RadiantOne Directory store is mounted directly at the root level, no other backends can be mounted.
