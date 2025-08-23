@@ -857,3 +857,63 @@ Here are some potentially helpful documentation links:
 Question: Which languages are supported for localization and internationalization for Identity Data Management?
 
 Answer: English
+
+- # Question/Answer Pair 63
+
+Question: What are node types that can be used for creating virtual identity views?
+
+Answer: Containers, Contents, Labels, and Links
+
+- # Question/Answer Pair 64
+
+Question: In RadiantOne v8.1, where do you configure joins in a virtual identity view?
+
+Answer: Control Panel > Setup > Directory Namespace > Namespace Design > [selected naming context] > Object Builder
+
+- # Question/Answer Pair 65
+
+Question: When extended joins are used, where are the extension attributes stored by default?
+
+Answer: Attributes managed by extended joins are stored locally in the RadiantOne Directory.
+
+- # Question/Answer Pair 66
+
+Question: How does RadiantOne handle overlapping attributes?
+
+Answer: Priority levels can be set to determine which sources are authoritative for specific attributes. Only attributes tagged as the highest priority are returned. As an alternative to using attribute priority, overlapping attributes can be mapped to a unique name from each source.
+
+- # Question/Answer Pair 67
+
+Question: In RadiantOne v8.1, what is the cn=staging naming context used for?
+
+Answer: CN=staging is the location where auto-generated views used for joins are mounted. Cache refresh configuration for secondary views auto-created from joins, must be managed from the cn=staging naming context > CACHE tab​.
+
+- # Question/Answer Pair 68
+
+Question: In RadiantOne v8.1, how do you configure joins in virtual identity views?
+
+Answer: On the OBJECT BUILDER tab for the selected naming context, use the ADD COMPONENT menu to add objects. Then use the ADD COMPONENT menu to add a join configuration to the canvas. The join configuration dictates the attributes from the primary and secondary objects to based on the join on.
+
+- # Question/Answer Pair 69
+
+Question: In RadiantOne v8.1, what is the DYNAMIC GROUPS configuration on the SPECIAL ATTRIBUTES HANDLING tab used for?
+
+Answer: Dictating that RadiantOne should evaluate the dynamic group membership automatically and return the explicit members as part of the member multi-valued attribute.
+
+- # Question/Answer Pair 70
+
+Question: In RadiantOne v8.1, what configuration should be used to have RadiantOne compute isMemberOf for entries to return their group memberships?
+
+Answer: Control Panel > Setup > Directory Namespace > Namespace Design > [selected naming context] > Special Attributes > Linked Attributes.
+
+- # Question/Answer Pair 71
+
+Question: How can the value of a computed attribute be populated?
+
+Answer: A Constant value, the result of a Function, or based on the value of an existing attribute.
+
+- # Question/Answer Pair 72
+
+Question: What should a RadiantOne administrator know when configuring joins in a virtual identity view?
+
+Answer: The objects to be joined must have a single attribute value in common. Objects from the same data source can be joined. Join processing can be slow unless the final identity view is stored in persistent cache.
